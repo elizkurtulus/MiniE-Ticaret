@@ -14,7 +14,7 @@ public class OrderRepository implements IRepository<Order> {
     @Override
     public void add(Order entity) {
         orders.add(entity);
-        System.out.println("Order eklendi");
+        System.out.println("Order eklendi id: " + entity.getId());
     }
 
     @Override
