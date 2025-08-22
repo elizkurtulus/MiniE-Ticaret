@@ -1,53 +1,57 @@
-package com.turkcell.entity;
+package com.turkcell.entity; // Bu sınıfın entity paketinde olduğunu belirtiyoruz.
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayList;// ArrayList sınıfını import ediyoruz.
+import java.util.List; // List interface'ini import ediyoruz.
 
 public class Order {
-    private int Id;
-    private int CustomerId;
-    private List<OrderItem>  orderItems = new ArrayList<>();
-    private double TotalPrice;
+    // Private field'lar - Encapsulation için private olarak tanımlıyoruz.
+    private int Id; // Sipariş ID'si
+    private int CustomerId; // Müşteri ID'si - Hangi müşterinin siparişi olduğunu belirtir
+    private List<OrderItem> orderItems = new ArrayList<>(); // Sipariş kalemleri listesi - Hangi ürünler sipariş edildi
+    private double TotalPrice; // Toplam fiyat - Siparişin toplam tutarı
 
+    // Default constructor - Parametresiz constructor
     public Order() {
     }
 
+    // Parametreli constructor
     public Order(int id, int customerId, List<OrderItem> orderItems, double totalPrice) {
-        Id = id;
-        CustomerId = customerId;
-        this.orderItems = orderItems;
-        TotalPrice = totalPrice;
+        Id = id;// ID field'ını parametre ile set ediyoruz.
+        CustomerId = customerId; // CustomerId field'ını parametre ile set ediyoruz.
+        this.orderItems = orderItems; // OrderItems field'ını parametre ile set ediyoruz.
+        TotalPrice = totalPrice; // TotalPrice field'ını parametre ile set ediyoruz.
     }
 
+    // Getter ve Setter metodları - Field'lara erişim sağlar
     public int getId() {
-        return Id;
+        return Id; // ID değerini döndürür.
     }
 
     public void setId(int id) {
-        Id = id;
+        Id = id; // ID değerini set eder.
     }
 
     public int getCustomerId() {
-        return CustomerId;
+        return CustomerId; // CustomerId değerini döndürür.
     }
 
     public void setCustomerId(int customerId) {
-        CustomerId = customerId;
+        CustomerId = customerId; // CustomerId değerini set eder.
     }
 
     public List<OrderItem> getOrderItems() {
-        return orderItems;
+        return orderItems; // OrderItems listesini döndürür.
     }
 
     public void setOrderItems(List<OrderItem> orderItems) {
-        this.orderItems = orderItems;
+        this.orderItems = orderItems; // OrderItems listesini set eder.
     }
 
     public double getTotalPrice() {
-        return TotalPrice;
+        return TotalPrice; // TotalPrice değerini döndürür.
     }
 
     public void setTotalPrice(double totalPrice) {
-        TotalPrice = totalPrice;
+        TotalPrice = totalPrice; // TotalPrice değerini set eder.
     }
 }
